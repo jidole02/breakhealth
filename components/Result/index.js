@@ -5,7 +5,7 @@ import ExeCard from "../exeCard";
 import Layout from "../layout";
 
 export default function Result({ navigation }) {
-  const maxMin = 2;
+  const maxMin = 30;
   const [resultList, setResultList] = useState([]);
   const [scoreSum, setScoreSum] = useState(0);
   const [min, setMin] = useState(maxMin);
