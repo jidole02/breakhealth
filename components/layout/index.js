@@ -1,16 +1,18 @@
-import { ScrollView, StyleSheet, View } from "react-native";
+import { StyleSheet, View } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
 
 export default function Layout({ children }) {
   return (
-    <ScrollView style={styles.wrapper}>
+    <View style={styles.wrapper}>
       <View style={styles.container}>{children}</View>
-    </ScrollView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   wrapper: {
-    backgroundColor: "#1E1E1E",
+    flexDirection: "row",
+    justifyContent: "center",
   },
   container: {
     paddingVertical: 40,

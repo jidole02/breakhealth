@@ -23,7 +23,7 @@ export default function Main({ navigation }) {
           어떠한 루틴이 나와도 절대 피하지 말것!
         </Text>
         <Text style={styles.exeListText}>운동 목록</Text>
-        {ExeData.map((exe, index) => (
+        {ExeData.slice(0, 3).map((exe, index) => (
           <ExeCard
             level={exe.level}
             kcal={exe.kcal}
@@ -32,6 +32,12 @@ export default function Main({ navigation }) {
             score={exe.score}
           />
         ))}
+        <TouchableOpacity
+          style={styles.more}
+          onPress={() => navigation.navigate("EXELIST")}
+        >
+          <Text style={styles.moreText}>전체 보기</Text>
+        </TouchableOpacity>
       </View>
     </Layout>
   );
@@ -84,5 +90,19 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginTop: 30,
     color: "white",
+  },
+  more: {
+    width: "100%",
+    flexDirection: "row",
+    justifyContent: "center",
+    marginTop: 25,
+    backgroundColor: "#323A44",
+    paddingVertical: 10,
+    borderRadius: 5,
+  },
+  moreText: {
+    color: "#85DEFF",
+    fontSize: 15,
+    fontWeight: "bold",
   },
 });

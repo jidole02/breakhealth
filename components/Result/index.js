@@ -55,7 +55,7 @@ export default function Result({ navigation }) {
 
   useEffect(() => {
     let sec = 2;
-    setInterval(() => {
+    const interval = setInterval(() => {
       if (sec === 60) {
         sec = 0;
         setSec(0);
@@ -65,6 +65,7 @@ export default function Result({ navigation }) {
         sec++;
       }
     }, 1000);
+    return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
