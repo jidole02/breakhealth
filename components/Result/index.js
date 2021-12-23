@@ -99,13 +99,7 @@ export default function Result({ navigation }) {
           )}
         </Text>
         {resultList.slice(0, 3).map((exe, index) => (
-          <ExeCard
-            name={exe.name}
-            level={exe.level}
-            score={exe.score}
-            kcal={exe.kcal}
-            key={index}
-          />
+          <ExeCard exe={exe} key={index} />
         ))}
         <TouchableOpacity
           style={styles.button}

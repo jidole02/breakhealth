@@ -1,23 +1,23 @@
 import { StyleSheet, Text, View } from "react-native";
 
-export default function ExeCard({ name, kcal, level, score }) {
+export default function ExeCard({ exe }) {
   return (
     <View style={styles.wrapper}>
-      <Text style={styles.exeName}>{name}</Text>
+      <Text style={styles.exeName}>{exe.name}</Text>
       <View style={styles.inforWrap}>
         <Text style={styles.infor}>
-          칼로리 <Text style={{ color: "#92FFFB" }}>{kcal}kcal</Text>
+          칼로리 <Text style={{ color: "#92FFFB" }}>{exe.kcal}kcal</Text>
         </Text>
         <Text style={[styles.infor, styles.marginLeft]}>
           난이도{" "}
-          {score > 8 ? (
-            <Text style={{ color: "#FF5A76" }}>{level}</Text>
-          ) : score > 5 ? (
-            <Text style={{ color: "#FF98EE" }}>{level}</Text>
-          ) : score > 2 ? (
-            <Text style={{ color: "#98FFC8" }}>{level}</Text>
+          {exe.score > 8 ? (
+            <Text style={{ color: "#FF5A76" }}>{exe.level}</Text>
+          ) : exe.score > 5 ? (
+            <Text style={{ color: "#FF98EE" }}>{exe.level}</Text>
+          ) : exe.score > 2 ? (
+            <Text style={{ color: "#98FFC8" }}>{exe.level}</Text>
           ) : (
-            <Text style={{ color: "#F5FF98" }}>{level}</Text>
+            <Text style={{ color: "#F5FF98" }}>{exe.level}</Text>
           )}
         </Text>
       </View>

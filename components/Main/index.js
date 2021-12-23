@@ -24,13 +24,7 @@ export default function Main({ navigation }) {
         </Text>
         <Text style={styles.exeListText}>운동 목록</Text>
         {ExeData.slice(0, 3).map((exe, index) => (
-          <ExeCard
-            level={exe.level}
-            kcal={exe.kcal}
-            name={exe.name}
-            key={index}
-            score={exe.score}
-          />
+          <ExeCard exe={exe} key={index} />
         ))}
         <TouchableOpacity
           style={styles.more}

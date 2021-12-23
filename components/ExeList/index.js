@@ -13,13 +13,7 @@ export default function ExeList({ navigation }) {
           <Text style={styles.back}>{"홈으로"}</Text>
         </TouchableOpacity>
         {ExeData.map((exe, index) => (
-          <ExeCard
-            level={exe.level}
-            kcal={exe.kcal}
-            name={exe.name}
-            score={exe.score}
-            key={index}
-          />
+          <ExeCard exe={exe} key={index} />
         ))}
       </Layout>
     </ScrollView>
