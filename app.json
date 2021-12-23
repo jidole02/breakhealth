@@ -1,32 +1,16 @@
 {
   "expo": {
-    "name": "breakhealth",
-    "slug": "breakhealth",
-    "version": "1.0.0",
-    "orientation": "portrait",
+    "name": "Break Health",
     "icon": "./assets/icon.png",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "version": "1.0.0",
+    "slug": "break-health",
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.breakhealth.breakhealth",
+      "buildNumber": "1.0.0"
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+      "package": "com.breakhealth.breakhealth",
+      "versionCode": 1
     }
   }
 }
