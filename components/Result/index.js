@@ -19,15 +19,26 @@ export default function Result({ navigation }) {
   const setList = () => {
     const arr = [];
     let scoreSum = 0;
-    for (let i = 0; i < 4; i++) {
-      if (i == 3) {
+    while (1) {
+      if (arr.length === 3) {
         setResultList(arr);
         setScoreSum(scoreSum);
         break;
       }
       const data = ExeData[rand()];
-      arr.push(data);
-      scoreSum += data.score;
+      const check = () => {
+        let bool = true;
+        arr.forEach((index, key) => {
+          if (data.kind === index.kind) {
+            bool = false;
+          }
+        });
+        return bool;
+      };
+      if (check()) {
+        arr.push(data);
+        scoreSum += data.score;
+      }
     }
   };
 
