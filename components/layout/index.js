@@ -13,7 +13,7 @@ export default function Layout({ children }) {
       <View style={styles.container}>{children}</View>
       <AdMobBanner
         bannerSize="banner"
-        adUnitID="ca-app-pub-2814958166637393~9752476790" // Test ID, Replace with your-admob-unit-id
+        adUnitID="ca-app-pub-2814958166637393/9959396326"
         servePersonalizedAds // true or false
         onDidFailToReceiveAdWithError={(err) => {
           console.log(err);

@@ -2,15 +2,19 @@
   "expo": {
     "name": "Break Health",
     "icon": "./assets/icon.png",
-    "version": "1.0.0",
+    "version": "3.0.0",
     "slug": "break-health",
     "ios": {
       "bundleIdentifier": "com.breakhealth.breakhealth",
-      "buildNumber": "1.0.0"
+      "buildNumber": "3.0.0"
     },
     "android": {
       "package": "com.breakhealth.breakhealth",
-      "versionCode": 1
+      "versionCode": 3,
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-2814958166637393~4447037584"
+      },
+      "permissions": []
     }
   }
 }
